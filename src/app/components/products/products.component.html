@@ -1,0 +1,12 @@
+@for (product of products; track $index) {
+
+<!-- <a [routerLink]="[ '/path', routeParam ]">name</a> -->
+<a [routerLink]="['/products', product.id]" class="productCard">
+  <h2>{{ product.id }}</h2>
+  <h3>{{ product.title }}</h3>
+  <h4>{{ product.price }}</h4>
+</a>
+
+}@empty {
+<h1>No Products Found</h1>
+}

@@ -1,0 +1,41 @@
+<nav>
+  <div class="logo">LOGO</div>
+  <div class="links">
+    @if (isLoggedin== 'true') {
+    <a
+      routerLink=""
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Home</a
+    >
+    <a
+      routerLink="about"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >About</a
+    >
+    <a
+      routerLink="services"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Services</a
+    >
+    <a
+      routerLink="products"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Products</a
+    >
+    }@else {
+    <a
+      routerLink="login"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Login</a
+    >
+    }
+  </div>
+  @if (isLoggedin=="true") {
+  <button class="btn" (click)="logout()">LogOut</button>
+  }
+</nav>
